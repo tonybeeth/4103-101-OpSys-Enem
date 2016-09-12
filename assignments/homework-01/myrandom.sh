@@ -4,4 +4,4 @@ array=($(cat /usr/share/dict/words))
 
 let length=${#array[@]}
 
-echo ${array[$RANDOM]}
+echo Random Word: ${array[$RANDOM]}
