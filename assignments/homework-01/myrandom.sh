@@ -1,11 +1,7 @@
 #! /bin/bash
 
-let sum=0
+array=($(cat /usr/share/dict/words))
 
-for value in $*;
+let length=${#array[@]}
 
-do let sum=sum+value;
-
-done
-
-echo $sum;
+echo ${array[$RANDOM]}
