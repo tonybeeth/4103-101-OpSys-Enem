@@ -1,11 +1,23 @@
 #! /bin/bash
 
 let sum=0
+let idx=0
 
-for value in $*;
+if [ $# -gt 1 ]
+then
+	echo -n $1;
+	for value in $*;
+	do
+		if [ $idx -gt 0 ]
+		then
+			echo -n '+';
+			echo -n $value;
+		fi
+		let idx=idx+1;
+		let sum=sum+value;
+	done
 
-do let sum=sum+value;
+echo -n =$sum;
+echo;
 
-done
-
-echo $sum;
+fi
