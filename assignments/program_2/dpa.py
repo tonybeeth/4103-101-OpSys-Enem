@@ -80,7 +80,7 @@ if __name__ == "__main__":
         philosophers.append(Philosopher(i, waiter))
         forks.append(threading.Lock())
     
-    #random.shuffle(philosophers) #for more unpredictable results 
+    random.shuffle(philosophers) #for more unpredictable results 
 
     # All philosophers start eating
     for philosopher in philosophers:
